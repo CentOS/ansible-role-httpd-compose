@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+ ServerAdmin webmaster@centos.org
+ ServerName {{ inventory_hostname }}
+ CustomLog logs/composes.centos.org_access.log combined
+ ErrorLog logs/composes.centos.org_error.log
+ DocumentRoot {{ composes_local_dir }}
+ AddDescription "{{ inventory_hostname }}" server.id
+ ReadmeName /centos-design/footer.html
+ HeaderName /centos-design/header-centos-mirror.html
+ IndexIgnore .??* *~ *# HEADER* README* RCS CVS *,v *,t FOOTER.html
+
+ # Rewrite Rules coming from Ansible/inventory
+ RewriteEngine On
+
+ #Redirecting to https now
+ RewriteCond $1 !^.well-known
+ RewriteCond %{HTTPS} !=on
+ RewriteRule ^/?(.*) https://{{ inventory_hostname }}/$1 [R,L]
+</VirtualHost>

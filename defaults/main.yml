@@ -1,1 +1,11 @@
 # Defaults variables for role httpd-compose
+
+compose_httpd_header: |
+  <div class="alert alert-success" role="alert">
+  This directory tree contains latest CentOS composes artifacts<br>
+  </div>
+composes_local_dir: /home/centos_composes/
+
+compose_user: compose
+compose_ssh_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGRnz3qAhfY7n1+sHj1r4SnTYPq6TIFw2FF0vQt8xRRsTsZa7Hoi5ro5DMJMSDIBJGGSIHQ2UhweHnXOnpHNx9CuvxKR14dpC5shM+8L/MGLQQ/pk9x/pk7/z0UokIuw3nj3zU3ANo+IKEsZKdXuY2O8QZDBzjdGklGhQra8we9+hrnebOBuCMBlZENrCtjfeAJYwlukaFB3dBbA1OGHMMQ+v4Y0F4Muj01P6nX3ntvKH4SfpGgFp8fpBgP3GY8zrgYIL4U55dnLI3A4aK9pOg0mcDa7cIswW3PPwSdVTWLy0CULXttiZ0Ybn0nI5ZfmXkZK3iD7hmYibf8w6B9kSuqdboV18TeN2TFlzcra3GoJ5n1FB8PpCQdfuFO2ybvE7ThSsocslxBKKl7ukiFrTLVkDeh5CtxSoHIVZRwBahB8QtMyCAzlo2Oxto/0visCmYqDSQw0slnZTAXXdzwWOY4P2frJNh/Vy0KWPVQWoI5Saz+SpyzQRP+OdT4rBtP4M= compose@centos.org
