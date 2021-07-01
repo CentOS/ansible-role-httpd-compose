@@ -7,7 +7,8 @@
  AddDescription "{{ inventory_hostname }}" server.id
  ReadmeName /centos-design/footer.html
  HeaderName /centos-design/header-centos-mirror.html
- IndexIgnore .??* *~ *# HEADER* README* RCS CVS *,v *,t FOOTER.html
+ IndexIgnoreReset ON
+ IndexIgnore *~ *# HEADER* README* RCS CVS *,v *,t FOOTER.html
 
  # Rewrite Rules coming from Ansible/inventory
  RewriteEngine On
