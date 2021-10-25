@@ -33,9 +33,8 @@ ErrorLog logs/ssl-composes.centos.org_error.log
 TransferLog logs/ssl-composes.centos.org_access.log
 LogLevel warn
 SSLEngine on
-SSLHonorCipherOrder on
-SSLProtocol all -SSLv2 -SSLv3
-SSLCipherSuite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4
+{{ httpd_tls_ciphers }}
+
 SSLCertificateFile /etc/pki/tls/certs/{{ inventory_hostname }}.crt
 SSLCertificateKeyFile /etc/pki/tls/private/{{ inventory_hostname }}.key
 SSLCertificateChainFile /etc/pki/tls/certs/{{ inventory_hostname }}-CAChain.crt
